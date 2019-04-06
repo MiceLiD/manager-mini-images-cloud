@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/add/add",
+    "pages/me/me",
+    "pages/detail/detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "管家loooo",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./assets/images/icon/index.png",
+        "selectedIconPath": "./assets/images/icon/index-selected.png"
+      },
+      {
+        "pagePath": "pages/add/add",
+        "text": "添加需求",
+        "iconPath": "./assets/images/icon/add.png",
+        "selectedIconPath": "./assets/images/icon/add-selected.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "./assets/images/icon/me.png",
+        "selectedIconPath": "./assets/images/icon/me-selected.png"
+      }
+    ]
+  }
+}
