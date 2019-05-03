@@ -1,15 +1,16 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/add/add",
+    "pages/news/news",
     "pages/me/me",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/article-detail/detail"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "管家loooo",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#000000",
@@ -17,22 +18,23 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页",
+        "text": "主页",
         "iconPath": "./assets/images/icon/index.png",
         "selectedIconPath": "./assets/images/icon/index-selected.png"
       },
       {
-        "pagePath": "pages/add/add",
-        "text": "添加需求",
-        "iconPath": "./assets/images/icon/add.png",
-        "selectedIconPath": "./assets/images/icon/add-selected.png"
+        "pagePath": "pages/news/news",
+        "text": "资讯",
+        "iconPath": "./assets/images/icon/news.png",
+        "selectedIconPath": "./assets/images/icon/news-selected.png"
       },
       {
         "pagePath": "pages/me/me",
-        "text": "我的",
+        "text": "个人中心",
         "iconPath": "./assets/images/icon/me.png",
         "selectedIconPath": "./assets/images/icon/me-selected.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

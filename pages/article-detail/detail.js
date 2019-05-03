@@ -5,35 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    pageType: '',
-    pagePic: '',
-    pageDetail: {
-      title: '',
-      advidory: '', // 咨询
-      orderUrl: ''
-    }
+    article: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const { text, imgUrl, advidory } = options
-    wx.setNavigationBarTitle({
-      title: text
-    })
+    const { articleId } = options
     this.setData({
-      pageType: text,
-      pagePic: imgUrl,
-      pageDetail: {
-        title: text,
-        advidory,
-        orderUrl: `/order?type=${text}`
-      }
+      article: `${articleId}-----content`
     })
   },
-  handleOnAdvidory() {},
-  handleOnOrder() {},
 
   /**
    * 生命周期函数--监听页面初次渲染完成
