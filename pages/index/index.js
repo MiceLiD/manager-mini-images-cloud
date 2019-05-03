@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    imgUrls: Array(3).fill('').map((item, index) => `../../assets/images/image/swipe${index}.jpg`),
+    imgUrls: Array(3).fill('').map((item, index) => `https://raw.githubusercontent.com/MiceLiD/company-service/master/assets/images/image/swipe${index}.jpg`),
     menus: [
       {
         title: '注册公司',
@@ -15,41 +15,41 @@ Page({
       }, {
         title: '公司变更',
         name: 'change-company'
-      }, {
+      }, /*{
         title: '社保开户',
         name: ''
-      }, {
+      }, */{
         title: '对公账户',
         name: 'public-accounts'
-      }, {
+      }, /*{
         title: '各类经营许可',
         name: ''
       }, {
         title: '代购发票',
         name: ''
-      }, {
+      }, */{
         title: '注册商标',
         name: 'register-mark'
-      }, {
+      }, /*{
         title: '申请专利',
         name: ''
       }, {
         title: '网站/小程序',
         name: ''
-      }, {
+      }, */{
         title: '公司注销',
-        name: ''
-      }, {
+        name: 'logout-company'
+      }, /*{
         title: '税务筹划',
         name: ''
-      }
+      }*/
     ].map(item => {
       const { title, name } = item
       return {
         iconUrl: '',
         text: title,
         advidory: '',
-        imgUrl: `../../assets/images/image/detail/${name}.jpg`
+        imgUrl: `https://raw.githubusercontent.com/MiceLiD/company-service/master/assets/images/image/detail/${name}.jpg`
       }
     })
   },

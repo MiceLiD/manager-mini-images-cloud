@@ -3,15 +3,25 @@ const util = require('../../utils/util.js')
 
 Page({
   data: {
-    newsList: Array(20).fill('news-').map((news, index) => {
-      return `${news}${index}----this is news example...${news}index----this is news example...${news}index----this is news example...${news}index----this is news example...${news}index----this is news example...${news}index----this is news example...${news}index----this is news example...`
-    })
+    newsList: []
   },
-  onLoad: function () {
-    this.setData({
-      logs: (wx.getStorageSync('logs') || []).map(log => {
-        return util.formatTime(new Date(log))
-      })
+  onLoad() {
+    wx.request({
+      url: 'https://www.easy-mock.com/mock/5ccbe84259548f2854decbab/company-creative/news-list',
+      data: {},
+      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      // header: {}, // 设置请求的 header
+      success: (res) => {
+        this.setData({
+          newsList: res.data.data.list
+        })
+      },
+      fail: function(res) {
+        // fail
+      },
+      complete: function(res) {
+        // complete
+      }
     })
   },
   handleOnNewsItem(e) {

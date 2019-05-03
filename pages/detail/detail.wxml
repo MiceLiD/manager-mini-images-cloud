@@ -2,6 +2,9 @@
 <view class="container detail">
   <view class="detail-pic" style="{{ 'width: 100%;background-size: 100%;background-repeat: no-repeat;background-image: url(' + pagePic + ')' }}">
   </view>
+  <view wx:if="{{ pageType === '注册公司' }}">
+    {{ pageType }}
+  </view>
   <view class="detail-content">
     {{ pageDetail.title }}
   </view>

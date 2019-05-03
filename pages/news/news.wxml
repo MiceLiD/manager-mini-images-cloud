@@ -2,8 +2,8 @@
 <view class="container news">
   <block wx:for='{{ newsList }}' wx:key="{{ index }}">
     <view class='news-item-wrapper'>
-      <view class='news-item' data-props="{{ { id: index } }}" bindtap="handleOnNewsItem">
-        {{ item }}
+      <view class='news-item' data-props="{{ { id: item.id } }}" bindtap="handleOnNewsItem">
+        {{ item.title }}
       </view>
     </view>
   </block>

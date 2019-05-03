@@ -11,10 +11,25 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad(options) {
     const { articleId } = options
-    this.setData({
-      article: `${articleId}-----content`
+    wx.request({
+      url: 'https://www.easy-mock.com/mock/5ccbe84259548f2854decbab/company-creative/news-list',
+      data: {},
+      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      // header: {}, // 设置请求的 header
+      success: (res) => {
+        const newsList = res.data.data.list
+        this.setData({
+          article: newsList.filter(item => item.id == articleId)[0].content
+        })
+      },
+      fail: function(res) {
+        // fail
+      },
+      complete: function(res) {
+        // complete
+      }
     })
   },
 
