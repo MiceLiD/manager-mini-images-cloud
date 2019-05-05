@@ -1,4 +1,0 @@
-<!--page/detail/detail.wxml-->
-<view class="container article-detail">
-  {{ article }}
-</view>
